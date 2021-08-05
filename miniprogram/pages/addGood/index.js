@@ -16,8 +16,8 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    if (!options.data) return
     let data = JSON.parse(options.data)
-    console.log(data)
     this.setData({
       name: data.name,
       tip: data.tip,
@@ -117,58 +117,35 @@ Page({
   },
 
   updateGood(){
-    wx.showLoading({
-      title: '',
-    })
-    wx.cloud.callFunction({
-      name: 'quickstartFunctions',
-      config: {
-        env: this.data.envId
-      },
-      data: {
-        type: 'updateRecord',
-        data: {
-          name: this.data.name,
-          tip: this.data.tip,
-          price: this.data.price,
-          image: this.data.image,
-          _id: this.data._id
-        }
-      }
-    }).then((resp) => {
+    let data = {
+      name: this.data.name,
+      tip: this.data.tip,
+      price: this.data.price,
+      image: this.data.image,
+      _id: this.data._id
+    }
+    wx.$api.updateRecord(data).then(res => {
       wx.navigateBack({
         delta: 1
       })
-      wx.hideLoading()
-    }).catch((e) => {
+    }).catch(e => {
       console.log(e)
-      wx.hideLoading()
     })
   },
 
   addGood () {
-    wx.showLoading({
-      title: '',
-    })
-    wx.cloud.callFunction({
-      name: 'quickstartFunctions',
-      data: {
-        type: 'addGood',
-        data: {
-          name: this.data.name,
-          tip: this.data.tip,
-          price: this.data.price,
-          image: this.data.image
-        }
-      }
-    }).then((resp) => {
-        wx.hideLoading()
-        wx.navigateBack({
-          delta: 1
-        })
-    }).catch((e) => {
-        console.log(e)
-        wx.hideLoading()
+    let data = {
+      name: this.data.name,
+      tip: this.data.tip,
+      price: this.data.price,
+      image: this.data.image
+    }
+    wx.$api.addGood(data).then(res => {
+      wx.navigateBack({
+        delta: 1
+      })
+    }).catch(e=>{
+      console.log(e)
     })
   },
 

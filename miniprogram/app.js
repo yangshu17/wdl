@@ -1,4 +1,14 @@
-//app.js
+import defineAlias from './utils/defineAlias'
+import api from './api/index'
+import jumpPage from './utils/jumpPage'
+import { PATHNAME_MAP as pathname } from './config/constants'
+
+defineAlias({
+  $api: api,
+  $jumpPage: jumpPage,
+  $pathname: pathname
+})
+
 App({
   onLaunch: function () {
     if (!wx.cloud) {

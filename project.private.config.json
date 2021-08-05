@@ -23,6 +23,12 @@
           "pathName": "pages/addGood/index",
           "query": "",
           "scene": null
+        },
+        {
+          "name": "预约页面",
+          "pathName": "pages/order/index",
+          "query": "",
+          "scene": null
         }
       ]
     }

@@ -1,49 +1,18 @@
-// miniprogram/pages/main/index.js
+// pages/order/index.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    goodsList: []
+
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-  },
 
-  getData() {
-    wx.$api.selectRecord().then(res => {
-      this.setData({
-        goodsList: res.result.data
-      })
-    }).catch(e => {
-      console.log(e)
-      this.initData()
-    })
-  },
-
-  initData() {
-    wx.$api.createData().then(res => {
-      this.getData()
-    }).catch(e=>{
-      console.log(e)
-    })
-  },
-
-  toAddGoodPage() {
-    wx.$jumpPage({
-      name: wx.$pathname.addGood
-    })
-  },
-
-  toPage(item){
-    let data = JSON.stringify(item.currentTarget.dataset.item)
-    wx.navigateTo({
-      url: `/pages/addGood/index?data=${data}`,
-    })
   },
 
   /**
@@ -57,7 +26,7 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-    this.getData()
+
   },
 
   /**
