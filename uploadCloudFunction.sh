@@ -1,0 +1,1 @@
+"/Applications/wechatwebdevtools.app/Contents/MacOS/cli" cloud functions deploy --e ty-movie-z29f5 --n quickstartFunctions --r --project "/Users/yangshu/Desktop/test-work/test-yun" --report

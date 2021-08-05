@@ -1,0 +1,49 @@
+.upload {
+    padding-left: 20rpx;
+    margin-bottom: 20rpx;
+}
+
+.upload-title {
+    font-weight: bold;
+    font-size: 38rpx;
+    margin-bottom: 18rpx;
+}
+
+.upload-textarea {
+    padding: 20rpx;
+    background: #eee;
+    border-radius: 20rpx;
+    border: 2rpx solid #999;
+}
+
+.upload-input {
+    padding: 5rpx;
+    width: 630rpx;
+    height: 90rpx;
+    background: #eee;
+    border-radius: 20rpx;
+    border: 2rpx solid #999;
+}
+
+.upload-btn {
+    width: 220rpx;
+    height: 80rpx;
+    background: rgb(173, 162, 235);
+    border-radius: 10rpx;
+    line-height: 80rpx;
+    text-align: center;
+}
+.button{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100vw;
+    height: 100rpx;
+    line-height: 100rpx;
+    font-weight: bold;
+    font-size: 32rpx;
+    border-radius: 20px;
+    background: #333666;
+    text-align: center;
+    color: #ffffff;
+}

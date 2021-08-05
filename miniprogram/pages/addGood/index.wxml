@@ -1,0 +1,31 @@
+<view>
+    <view class="upload">
+        <view class="upload-title">
+            名称：
+        </view>
+        <input bindinput="bindinput" data-type="name" class="upload-input"  type="text" value="{{name}}" />
+    </view>
+    <view class="upload">
+        <view class="upload-title">
+            描述：
+        </view>
+        <textarea bindinput="bindinput" data-type="tip" class="upload-textarea" type="text" value="{{tip}}" />
+    </view>
+    <view class="upload">
+        <view class="upload-title">
+            价格：
+        </view>
+        <input bindinput="bindinput" data-type="price" class="upload-input" type="text" value="{{price}}" />
+    </view>
+    <view class="upload">
+        <view class="upload-title">
+            封面图：
+        </view>
+        <view bindtap="uploadImg" class="upload-btn">
+            点击上传图片
+        </view>
+        <image src="{{image}}" />
+    </view>
+    <view bindtap="subMit" class="button">确定上传</view>
+</view>
+  
