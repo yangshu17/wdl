@@ -1,0 +1,54 @@
+<view>
+    <view class="top" bindtap="toChoosePetPage">
+        <!-- <view class="top-left"></view> -->
+        <image class="top-left" mode="widthFix" src="../../../images/petType/icon.png" />
+        <view class="top-right">
+            <view class="top-right-name" >{{petName}}</view>
+            <view class="top-right-type" >{{type}}</view>
+            <view class="top-right-list">
+                <view class="top-right-list-item" wx:for="{{userServList}}" wx:for-item="item" wx:key="index" >
+                    {{item}}
+                </view>
+            </view>
+        </view>
+    </view>
+
+    <view class="mid">
+        <view class="mid-title">
+            选择时间
+        </view>
+        <view class="mid-date">
+            <view bindtap="clickDate" data-status="{{true}}" class="mid-date-number {{isToday ? 'mid-date-number1' : ''}}">
+                {{todayDate}}(今天)
+            </view>
+            <view bindtap="clickDate" data-status="{{false}}" class="mid-date-number {{isToday ? '' : 'mid-date-number1'}}">
+                {{tomorrowDate}}(明天)
+            </view>
+        </view>
+        <view class="mid-point">
+            <view bindtap="clickPoint" wx:for="{{12}}" data-item="{{index}}" wx:for-item="item" wx:key="index" class="mid-point-clock {{chooseIdx=== index? 'mid-point-clock-choose':''}}">
+                {{item+9}}
+                <view class="mid-point-clock-unit">点</view>
+            </view>
+        </view>
+    </view>
+
+    <view class="mid">
+        <view class="mid-title">
+            选择美容师
+        </view>
+        <view class="beaut">
+            <view bindtap="clickBeaut" data-idx="{{index}}" data-item="{{item}}" wx:for="{{beautList}}" wx:for-item="item" wx:key="index" class="beaut-list {{beautIdx === index ? 'beaut-list1' : ''}}">
+                <view class="beaut-list-img">头像</view>
+                <view class="beaut-list-name">{{item.name}}</view>
+                <view class="beaut-list-title {{beautIdx === index ? 'beaut-list-title1' : ''}}">{{item.level}}</view>
+            </view>
+        </view>
+    </view>
+
+    <view class="bottom" >
+        <view bindtap="subMit" class="bottom-btn" >
+            确定
+        </view>
+    </view>
+</view>

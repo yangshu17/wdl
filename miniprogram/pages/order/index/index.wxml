@@ -1,0 +1,45 @@
+<view >
+    <view >
+        <view wx:if="{{!isChoosePet}}" bindtap="toChoosePetPage" class="top">
+            <view class="top-left"></view>
+            <view class="top-right">
+                点击这里添加宠物
+            </view>
+        </view>
+        <view wx:else class="top" bindtap="toChoosePetPage">
+            <!-- <view class="top-left"></view> -->
+            <image class="top-left" mode="widthFix" src="../../../images/petType/icon.png" />
+            <view class="top-right1">
+                {{petName}}
+                <view class="top-right1-button">
+                    更换宠物
+                </view>
+            </view>
+        </view>
+    </view>
+
+    <view  class="tab">
+        <view class="list {{chooseIdx === index ? 'list-choose' : ''}}"  bindtap="changeType" data-item="{{index}}" wx:key="index" wx:for="{{dataList}}" wx:for-item="item">
+            <view class="list-item" >
+                {{item}}
+            </view>
+        </view>
+    </view>
+
+    <view class="tip" >
+        请在以下列表选择服务：
+    </view>
+    <view class="serv">
+        <view class="serv-list {{item.isChoose ? 'serv-list-choose' : ''}}"  bindtap="changeUserServList" data-item="{{index}}" wx:key="index" wx:for="{{servList}}" wx:for-item="item">
+            <view class="serv-list-item" >
+                {{item.name}}
+            </view>
+        </view>
+    </view>
+
+    <view class="bottom" >
+        <view bindtap="subMit" class="bottom-btn" >
+            下一步
+        </view>
+    </view>
+</view>

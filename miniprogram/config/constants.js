@@ -8,7 +8,9 @@ export const APP_VERSION = '0.0.1'
 export const PATHNAME_MAP = {
   index: 'pages/index/index', // 首页
   addGood: 'pages/addGood/index', // 添加商品页面
-  order: 'pages/order/index', // 预约
+  order: 'pages/order/index/index', // 预约首页
+  choosePet: 'pages/order/choosePet/index', // 添加宠物
+  chooseTime: 'pages/order/chooseTime/index', // 选择时间
 }
 
 

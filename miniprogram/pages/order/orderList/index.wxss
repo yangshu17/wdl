@@ -1,0 +1,106 @@
+.mid-date {
+    margin-top: 32rpx;
+    display: flex;
+}
+
+.mid-date-number {
+    margin-right: 24rpx;
+    width: 240rpx;
+    height: 110rpx;
+    line-height: 110rpx;
+    background:#eee;
+    border-radius: 40rpx;
+    text-align: center;
+    font-size: 38rpx;
+    color: #333;
+    border: 4rpx solid #333;
+}
+
+.mid-date-number1 {
+    background:rgb(66, 207, 207);
+    border: 4rpx solid rgb(66, 207, 207);
+    color: #fff;
+}
+
+/* .clock {
+    display: flex;
+    margin-top: 32rpx;
+    margin-left: 24rpx;
+}
+.clock-list {
+    display: flex;
+    margin-bottom: 48rpx;
+    font-size: 36rpx;
+} */
+
+.list{
+    margin-top: 8rpx;
+    padding: 24rpx;
+}
+
+.order {
+    margin-bottom: 32rpx;
+}
+
+.list-clock{
+    font-size: 46rpx;
+    color: salmon;
+    font-weight: bold;
+}
+
+.list-info {
+    display: flex;
+    align-items: center;
+}
+
+.list-info-img {
+    width: 100rpx;
+    height: 100rpx;
+    background: skyblue;
+    border-radius: 50rpx;
+}
+
+.list-info-right{
+    margin-left: 32rpx;
+}
+.list-info-right-name {
+    display: flex;
+    font-size: 32rpx;
+    color: teal;
+    font-weight: bold;
+}
+.list-info-right-type {
+    display: flex;
+    font-size: 32rpx;
+    color: teal;
+    font-weight: bold;
+}
+.list-info-right-beauter {
+    display: flex;
+    font-size: 32rpx;
+    color: teal;
+    font-weight: bold;
+}
+.list-info-right-beauter-title {
+    display: flex;
+    font-size: 32rpx;
+    color: #333;
+    font-weight: bold;
+}
+.bottom {
+    height: 100rpx;
+}
+
+.bottom-btn {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100vw;
+    height: 130rpx;
+    background: rgb(66, 207, 207);
+    border-radius: 50rpx;
+    text-align: center;
+    line-height: 130rpx;
+    font-size: 42rpx;
+    color: #fff;
+}

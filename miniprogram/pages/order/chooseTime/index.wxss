@@ -1,0 +1,181 @@
+.top{
+    width: 100vw;
+    height: 200rpx;
+    display: flex;
+    align-items: center;
+}
+
+.top-left{
+    width: 160rpx;
+    height: 160rpx;
+    margin-left: 24px;
+    background: #666;
+    border-radius: 80rpx;
+}
+.top-right {
+    flex: 1;
+    margin-left: 12px;
+    font-size: 28rpx;
+    color: #444;
+    padding-right: 24rpx;
+}
+
+.top-right-name{
+    font-size: 32rpx;
+    font-weight: bold;
+    color: #333;
+}
+.top-right-type{
+    font-size: 32rpx;
+    font-weight: bold;
+    color: rgb(68, 187, 223);
+}
+
+.top-right-list{
+    display: flex;
+    font-size: 32rpx;
+    font-weight: bold;
+    color: rgb(255, 120, 58);
+}
+
+.top-right-list-item{
+    margin-right: 12rpx;
+}
+
+.mid {
+    padding: 24rpx;
+}
+
+.mid-date {
+    margin-top: 32rpx;
+    display: flex;
+}
+
+.mid-date-number {
+    margin-right: 24rpx;
+    width: 240rpx;
+    height: 110rpx;
+    line-height: 110rpx;
+    background:#eee;
+    border-radius: 40rpx;
+    text-align: center;
+    font-size: 38rpx;
+    color: #333;
+    border: 4rpx solid #333;
+}
+
+.mid-date-number1 {
+    background:rgb(66, 207, 207);
+    border: 4rpx solid rgb(66, 207, 207);
+    color: #fff;
+}
+
+.mid-title {
+    font-size: 46rpx;
+    color: #666;
+}
+
+.mid-point {
+    margin-top: 48rpx;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.mid-point-clock {
+    display: flex;
+    width: 100rpx;
+    min-height: 100rpx;
+    border-radius: 50rpx;
+    font-size: 48rpx;
+    border: 4rpx solid #333;
+    color: #333;
+    align-items: center;
+    line-height: 100rpx;
+    justify-content: center;
+    margin-bottom: 18rpx;
+}
+
+.mid-point-clock-choose {
+    border: 4rpx solid rgb(66, 207, 207);
+    background: rgb(66, 207, 207);
+    color: #fff;
+}
+
+.mid-point-clock-unit {
+    height: 90rpx;
+    vertical-align: bottom;
+    font-size: 22rpx;
+}
+
+.beaut {
+    display: flex;
+    flex-wrap: wrap;
+}
+.beaut-list {
+    position: relative;
+    margin-top: 24rpx;
+    margin-right: 24rpx;
+    padding: 32rpx;
+    background: #eee;
+    border-radius: 32rpx;
+    text-align: center;
+    border: 4rpx solid #eee;
+}
+
+.beaut-list1 {
+    border: 4rpx solid coral;
+}
+
+.beaut-list-img {
+    width: 160rpx;
+    height: 160rpx;
+    line-height: 140rpx;
+    text-align: center;
+    background: cadetblue;
+    border-radius: 120rpx;
+}
+
+.beaut-list-name {
+    margin-top: 24rpx;
+    font-size: 40rpx;
+    color: #333;
+}
+
+.beaut-list-title {
+    width: 80rpx;
+    height: 60rppx;
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 22rpx;
+    background:rgb(118, 167, 167);
+    border-radius: 10rpx;
+    color: #fff;
+    border-top-right-radius: 32rpx;
+}
+
+.beaut-list-title1 {
+    background: coral
+}
+
+
+
+
+.bottom {
+    height: 100rpx;
+}
+
+.bottom-btn {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100vw;
+    height: 130rpx;
+    background: rgb(66, 207, 207);
+    border-radius: 50rpx;
+    text-align: center;
+    line-height: 130rpx;
+    font-size: 42rpx;
+    color: #fff;
+}

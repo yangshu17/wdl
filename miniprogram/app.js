@@ -2,6 +2,7 @@ import defineAlias from './utils/defineAlias'
 import api from './api/index'
 import jumpPage from './utils/jumpPage'
 import { PATHNAME_MAP as pathname } from './config/constants'
+import updateManger from '/utils/updateManager'
 
 defineAlias({
   $api: api,
@@ -9,7 +10,13 @@ defineAlias({
   $pathname: pathname
 })
 
+
 App({
+  onShow(opts){
+    console.log(opts)
+    // version update checker
+    updateManger.checkAndUpdate()
+  },
   onLaunch: function () {
     if (!wx.cloud) {
       console.error('请使用 2.2.3 或以上的基础库以使用云能力')

@@ -1,0 +1,44 @@
+.tab {
+    margin-top: 24rpx;
+    display: flex;
+    justify-content: space-around;
+}
+.list{
+    width: 160rpx;
+    height: 60rpx;
+    line-height: 60rpx;
+    background: #ddd;
+    text-align: center;
+    border-radius: 30rpx;
+    color: #666;
+}
+
+.list-choose {
+    background: rgb(66, 207, 207);
+    color: #fff;
+}
+
+.petList {
+    margin-top: 42rpx;
+    margin-left: 18rpx;
+}
+
+.petList-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 12rpx;
+}
+
+.item-img {
+    width: 160rpx;
+    height: 160rpx;
+    /* background: cornflowerblue; */
+    border-radius: 80rpx;
+}
+
+.item-title {
+    margin-left: 24rpx;
+    font-size: 36rpx;
+    color: #333;
+}
+

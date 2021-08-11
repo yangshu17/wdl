@@ -25,8 +25,26 @@
           "scene": null
         },
         {
-          "name": "预约页面",
-          "pathName": "pages/order/index",
+          "name": "预约",
+          "pathName": "pages/order/index/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "选择宠物页",
+          "pathName": "pages/order/choosePet/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "选择时间页",
+          "pathName": "pages/order/chooseTime/index",
+          "query": "petName=泰迪&type=美容",
+          "scene": null
+        },
+        {
+          "name": "预约列表",
+          "pathName": "pages/order/orderList/index",
           "query": "",
           "scene": null
         }

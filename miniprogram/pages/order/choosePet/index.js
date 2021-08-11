@@ -1,11 +1,19 @@
-// pages/order/index.js
+// pages/order/choosePet/index.js
+import {petType} from './constants'
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    dataList:[
+      '小型犬',
+      '中型犬',
+      '大型犬',
+      '猫咪'
+    ],
+    chooseIdx: 0,
+    petList:petType['小型犬']
   },
 
   /**
@@ -13,6 +21,29 @@ Page({
    */
   onLoad: function (options) {
 
+  },
+
+  changePet(item) {
+    let idx = item.currentTarget.dataset.item || 0
+    this.setData({
+      chooseIdx: idx,
+      petList: petType[this.data.dataList[idx]]
+    })
+    console.log(petType[this.data.dataList[idx]])
+  },
+
+  choosePet (item) {
+    let data = item.currentTarget.dataset.data
+    console.log(data.name)
+    let pages = getCurrentPages()
+    let prevPage = pages[pages.length - 2];
+    prevPage.setData({
+      petName: data.name, // 修改上一页的属性值；
+      isChoosePet: true
+    })
+    wx.navigateBack({
+      delta: 1
+    })
   },
 
   /**

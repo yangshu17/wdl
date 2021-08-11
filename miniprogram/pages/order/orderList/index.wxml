@@ -1,0 +1,45 @@
+<view >
+    <!--  -->
+    <view class="mid-date">
+        <view bindtap="clickDate" data-status="{{true}}" class="mid-date-number {{isToday ? 'mid-date-number1' : ''}}">
+            {{todayDate}}(今天)
+        </view>
+        <view bindtap="clickDate" data-status="{{false}}" class="mid-date-number {{isToday ? '' : 'mid-date-number1'}}">
+            {{tomorrowDate}}(明天)
+        </view>
+    </view>
+    <!-- 预约列表 -->
+    <view class="list" >
+        <view class="order" wx:for="{{isToday ? todayList : tomList}}" wx:key="index" wx:for-item="item">
+            <view class="list-clock">
+                {{item.time}}点
+            </view>
+            <view class="list-info" >
+                <view class="list-info-img"></view>
+                <view class="list-info-right">
+                    <view class="list-info-right-name">
+                        <view class="list-info-right-beauter-title" >宠物名称：</view>
+                        {{item.petName}}
+                    </view>
+                    <view class="list-info-right-type">
+                        <view class="list-info-right-beauter-title" >服务内容：</view>
+                        {{item.type}}
+                        (<view class="" wx:for="{{item.userServList}}" wx:key="idx" wx:for-item="data">
+                            {{data}}{{index === item.userServList.length - 1 ? '' : '，'}}
+                        </view>)
+                    </view>
+                    <view class="list-info-right-beauter">
+                        <view class="list-info-right-beauter-title" >美容师：</view>
+                        {{item.beauter.name}}
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+
+    <view class="bottom" >
+        <view bindtap="toPage" class="bottom-btn" >
+            去预约
+        </view>
+    </view>
+</view>
