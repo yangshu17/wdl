@@ -1,0 +1,16 @@
+<view wx:if="{{isAuth}}">
+    <view class="info">
+        <view class="info-left">
+            <open-data type="userAvatarUrl"></open-data>
+        </view>
+        <open-data type="userNickName"></open-data>
+    </view>
+    <button open-type="getPhoneNumber" bindgetphonenumber="getUserNumber">
+        一键获取手机号（需要后台300元认证）
+    </button>
+    <!-- 底部导航 -->
+    <tabBar active="{{1}}" />
+</view>
+<view wx:else>
+    <button class="user-btn" open-type="getUserInfo" bindgetuserinfo="getUserInfo">一键登陆</button>
+</view>

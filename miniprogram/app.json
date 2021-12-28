@@ -1,19 +1,20 @@
 {
   "pages": [
+    "pages/newIndex/index",
     "pages/order/orderList/index",
     "pages/order/index/index",
     "pages/order/choosePet/index",
     "pages/index/index",
     "pages/addGood/index",
-    "pages/order/chooseTime/index"
+    "pages/order/chooseTime/index",
+    "pages/mine/index"
   ],
   "window": {
     "backgroundColor": "#F6F6F6",
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#F6F6F6",
-    "navigationBarTitleText": "汪多乐生活馆",
+    "navigationBarTitleText": "雀伶阁宠物知家",
     "navigationBarTextStyle": "black"
   },
-  "sitemapLocation": "sitemap.json",
-  "style": "v2"
+  "sitemapLocation": "sitemap.json"
 }

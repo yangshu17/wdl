@@ -13,7 +13,7 @@
     "miniprogram": {
       "list": [
         {
-          "name": "首页",
+          "name": "旧首页",
           "pathName": "pages/index/index",
           "query": "",
           "scene": null
@@ -45,6 +45,18 @@
         {
           "name": "预约列表",
           "pathName": "pages/order/orderList/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "新首页",
+          "pathName": "pages/newIndex/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "我的",
+          "pathName": "pages/mine/index",
           "query": "",
           "scene": null
         }

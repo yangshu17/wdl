@@ -1,0 +1,8 @@
+<view class="list">
+    <view wx:for="{{list}}" wx:key="index" data-item="{{item}}" bind:tap="click">
+        <view class="list-item">
+            <van-icon size="40" name="{{item.icon}}" color="cornflowerblue" />
+            <view>{{item.name}}</view>
+        </view>
+    </view>
+</view>

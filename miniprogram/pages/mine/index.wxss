@@ -1,0 +1,16 @@
+/* pages/mine/index.wxss */
+.info {
+  margin-top: 32rpx;
+  margin-left: 24rpx;
+  display: flex;
+  align-items: center;
+}
+.info-left {
+  margin-right: 32rpx;
+  width: 120rpx;
+  height: 120rpx;
+  border: 3rpx solid #fff;
+  border-radius: 60rpx;
+  box-sizing: border-box;
+  overflow: hidden;
+}

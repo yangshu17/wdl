@@ -1,0 +1,7 @@
+<view>
+    <!-- 轮播图 -->
+    <swiper-img />
+    <act-list />
+    <!-- 底部导航 -->
+    <tabBar active="0" />
+</view>

@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "swiper-img": "../../components/swiperImg/index",
+    "tabBar": "../../components/tabBar/index",
+    "act-list": "./components/actList"
+  }
+}

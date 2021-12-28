@@ -1,23 +1,22 @@
-import dateTrans from '../../../utils/deteTrans'
+import dateTrans from "../../../utils/deteTrans";
 Page({
-
   /**
    * 页面的初始数据
    */
   data: {
     // orderList :[],
-    todayDate: '',
-    tomorrowDate: '',
+    todayDate: "",
+    tomorrowDate: "",
     isToday: true,
     todayList: [],
-    tomList: []
+    tomList: [],
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    this.setDate()
+    this.setDate();
   },
 
   setDate() {
@@ -44,83 +43,74 @@ Page({
   //   return dateTrans(date)
   // },
 
-  getList () {
+  getList() {
     let today = new Date();
-    today.setHours(0,0,0,0);
+    today.setHours(0, 0, 0, 0);
     today = today.getTime();
-    wx.$api.getList({
-      time: today,
-    }).then(res => {
-      let todayList = []
-      let tomList = []
-      res.result.data.forEach(item => {
-        if (item.date > today + 24*60*60*1000) {
-          tomList.push(item)
-        } else {
-          todayList.push(item)
-        }
-      });
-      this.setData({
-        todayList,
-        tomList
+    wx.$api
+      .getList({
+        time: today,
       })
-    }).catch(e => {
-      console.log(222,e)
-    })
+      .then((res) => {
+        let todayList = [];
+        let tomList = [];
+        res.result.data.forEach((item) => {
+          if (item.date > today + 24 * 60 * 60 * 1000) {
+            tomList.push(item);
+          } else {
+            todayList.push(item);
+          }
+        });
+        this.setData({
+          todayList,
+          tomList,
+        });
+      })
+      .catch((e) => {
+        console.log(222, e);
+      });
   },
 
-  toPage () {
+  toPage() {
     wx.$jumpPage({
-      name: wx.$pathname.order
-    })
+      name: wx.$pathname.order,
+    });
   },
 
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
-  onReady: function () {
-
-  },
+  onReady: function () {},
 
   /**
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-    this.getList()
+    this.getList();
   },
 
   /**
    * 生命周期函数--监听页面隐藏
    */
-  onHide: function () {
-
-  },
+  onHide: function () {},
 
   /**
    * 生命周期函数--监听页面卸载
    */
-  onUnload: function () {
-
-  },
+  onUnload: function () {},
 
   /**
    * 页面相关事件处理函数--监听用户下拉动作
    */
-  onPullDownRefresh: function () {
-
-  },
+  onPullDownRefresh: function () {},
 
   /**
    * 页面上拉触底事件的处理函数
    */
-  onReachBottom: function () {
-
-  },
+  onReachBottom: function () {},
 
   /**
    * 用户点击右上角分享
    */
-  onShareAppMessage: function () {
-
-  }
-})
+  onShareAppMessage: function () {},
+});

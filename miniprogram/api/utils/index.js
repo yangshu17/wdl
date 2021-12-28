@@ -1,23 +1,27 @@
 // import request from '../../utils/request'
 
-export default(type, data) => {
+export default (type, data) => {
   wx.showLoading({
-    title: '',
-  })
+    title: "",
+  });
   return new Promise((resolve, reject) => {
-    wx.cloud.callFunction({
-      name: 'quickstartFunctions',
-      data: {
-        type,
-        data
-      }
-    }).then((res) => {
-      wx.hideLoading()
-      resolve(res)
-    }).catch((err) => {
-      wx.hideLoading()
-      reject(err)
-    })
-  })
-}
-
+    let user = wx.getStorageSync("userInfo") || {}
+    wx.cloud
+      .callFunction({
+        name: "quickstartFunctions",
+        data: {
+          token: user.userId,
+          type,
+          data,
+        },
+      })
+      .then((res) => {
+        wx.hideLoading();
+        resolve(res);
+      })
+      .catch((err) => {
+        wx.hideLoading();
+        reject(err);
+      });
+  });
+};
