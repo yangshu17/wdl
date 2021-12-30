@@ -21,14 +21,18 @@ Component({
    */
   methods: {
     onChange(event) {
+      if (this.data.active === event.detail) return 
       if (event.detail === 1) {
         wx.$jumpPage({
           name: wx.$pathname.mine,
         });
       } else {
-        wx.redirectTo({
-          url: `/${wx.$pathname.newIndex}`,
-        });
+        // wx.redirectTo({
+        //   url: `/${wx.$pathname.newIndex}`,
+        // });
+        wx.navigateBack({
+          delta: 2
+        })
         // this.setData({
         //   active: event.detail,
         // });

@@ -3,7 +3,12 @@ Page({
   /**
    * 页面的初始数据
    */
-  data: {},
+  data: {
+    imageURL1:
+      "cloud://ty-movie-z29f5.7479-ty-movie-z29f5-1256830142/photo1640863463294.png",
+    imageURL2:
+      "cloud://ty-movie-z29f5.7479-ty-movie-z29f5-1256830142/photo1640863470421.png",
+  },
 
   /**
    * 生命周期函数--监听页面加载

@@ -2,6 +2,12 @@
     <!-- 轮播图 -->
     <swiper-img />
     <act-list />
+    <view class="card">
+        <van-card num="9999" thumb-mode="aspectFill" price="29.00" desc="享受美发、烫发、美容、按摩等多种服务" title="美容美发" thumb="{{imageURL1}}" />
+    </view>
+    <view class="card">
+        <van-card num="9999" thumb-mode="aspectFill" price="99.00" desc="独家本、城限本、热门本、沉浸式体验" title="剧本杀" thumb="{{ imageURL2 }}" />
+    </view>
     <!-- 底部导航 -->
     <tabBar active="0" />
 </view>

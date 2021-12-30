@@ -2,6 +2,7 @@
   "usingComponents": {
     "swiper-img": "../../components/swiperImg/index",
     "tabBar": "../../components/tabBar/index",
-    "act-list": "./components/actList"
+    "act-list": "./components/actList",
+    "van-card": "@vant/weapp/card/index"
   }
 }

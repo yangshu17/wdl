@@ -10,7 +10,11 @@ Page({
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function (options) {},
+  onLoad: function (options) {
+    this.setData({
+      isAuth: wx.getStorageSync("userInfo").nickName,
+    });
+  },
 
   getUserNumber(e) {
     console.log(111, e);
